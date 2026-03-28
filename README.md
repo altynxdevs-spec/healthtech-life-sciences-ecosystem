@@ -2,7 +2,48 @@
 ### Secure Patient Data and AI-Driven Diagnostic Ecosystem
 
 ---
+```mermaid
+graph LR
+    %% Advanced CSS Styling for Smoothness and Color
+    classDef userGateway fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff,rx:20,ry:20;
+    classDef coreApp fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#fff,rx:20,ry:20;
+    classDef aiEngine fill:#4c0519,stroke:#f43f5e,stroke-width:2px,color:#fff,rx:20,ry:20;
+    classDef cloudInfra fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#fff,rx:20,ry:20;
+    classDef dataLayer fill:#422006,stroke:#fb923c,stroke-width:2px,color:#fff,rx:20,ry:20;
+    
+    %% Link Styling (Sleek grey paths)
+    linkStyle default stroke:#64748b,stroke-width:2px,fill:none;
 
+    %% Free-floating Nodes with HealthTech Icons
+    Patient(["fa:fa-mobile-screen Patient App"]):::userGateway
+    Doctor(["fa:fa-stethoscope Clinician Portal"]):::userGateway
+    API(["fa:fa-network-wired FHIR API Gateway"]):::userGateway
+    
+    Core(["fa:fa-notes-medical Core EHR System"]):::coreApp
+    Data(["fa:fa-database Interoperability Layer"]):::coreApp
+    
+    AI(["fa:fa-brain AI Diagnostics"]):::aiEngine
+    Predict(["fa:fa-heart-pulse Predictive Analytics"]):::aiEngine
+    
+    Cloud(["fa:fa-cloud HIPAA Compliant Cloud"]):::cloudInfra
+    Security(["fa:fa-shield-halved Zero-Trust Security"]):::cloudInfra
+    
+    CRM(["fa:fa-users Salesforce Health"]):::dataLayer
+    Vault(["fa:fa-lock Encrypted Patient Data"]):::dataLayer
+
+    %% Flow Path Connections
+    Patient == "TLS 1.3" ==> API
+    Doctor == "Secure Auth" ==> API
+    API -. "Verify" .-> Security
+    API ==> Core
+    Core ==> Data
+    Data ==> AI
+    AI -. "Live Vitals" .-> Predict
+    Core ==> Cloud
+    Cloud ==> CRM
+    CRM ==> Vault
+    Predict ==> Vault
+```
 ![Status](https://img.shields.io/badge/Status-BD5A00?style=flat) ![Proprietary](https://img.shields.io/badge/Proprietary-FF8C00?style=flat) &nbsp; ![Industry](https://img.shields.io/badge/Industry-004B8D?style=flat) ![HealthTech](https://img.shields.io/badge/HealthTech-007FFF?style=flat) &nbsp; ![Architecture](https://img.shields.io/badge/Architecture-00695C?style=flat) ![Compliant](https://img.shields.io/badge/Compliant-26A69A?style=flat)
 
 This repository serves as a mission-critical engineering showcase by **Altynx**. It demonstrates a unified approach to modern healthcare technology, focusing on data interoperability, regulatory compliance, and intelligent patient outcomes.
